@@ -17,12 +17,12 @@
         <div
             class="color-option"
             style="background-color: #DF0101"
-            data-color="#e74c3c"
+            data-color="#DF0101"
         ></div>
         <div
             class="color-option"
             style="background-color: #FF8000"
-            data-color="#d35400"
+            data-color="#FF8000"
         ></div>
         <div
             class="color-option"
@@ -32,50 +32,62 @@
         <div
             class="color-option"
             style="background-color: #D0FA58"
-            data-color="#27ae60"
+            data-color="#D0FA58"
         ></div>
         <div
             class="color-option"
             style="background-color: #298A08"
-            data-color="#27ae60"
+            data-color="#298A08"
         ></div>
         <div
             class="color-option"
             style="background-color: #58D3F7"
-            data-color="#34495e"
+            data-color="#58D3F7"
         ></div>
         <div
             class="color-option"
             style="background-color: #013ADF"
-            data-color="#3498db"
+            data-color="#013ADF"
         ></div>
         <div
             class="color-option"
             style="background-color: #0B2161"
-            data-color="#8e44ad"
+            data-color="#0B2161"
         ></div>
         <div
             class="color-option"
             style="background-color: #4B088A"
-            data-color="#95a5a6"
+            data-color="#4B088A"
         ></div>
         <div
             class="color-option"
             style="background-color: #BDBDBD"
-            data-color="#95a5a6"
+            data-color="#BDBDBD"
         ></div>
         <div
             class="color-option"
             style="background-color: #000000"
-            data-color="#95a5a6"
+            data-color="#000000"
         ></div>
     </div>
 
     <canvas></canvas>
 
-    <!-- line width -->
-    <input id="line-width" type="range" min="1" max="10" vlaue="5" step="0.5" />
+    <div class="btns">
+        <!-- line width -->
+        <input id="line-width" type="range" min="1" max="10" vlaue="5" step="0.5" />
+
+        <!-- color fill -->
+        <button id="mode-btn">Fill</button>
+
+        <!-- reset -->
+        <button id="destroy-btn">Destroy</button>
+
+        <!-- eraser -->
+        <button id="eraser-btn">Eraser</button>
+    </div>
 
     <script src="js/app.js"></script>
+    <script src="js/color.js"></script>
 </body>
 </html>

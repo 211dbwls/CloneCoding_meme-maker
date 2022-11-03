@@ -1,13 +1,15 @@
 @import "reset.css";
 @import "color.css";
+@import "btn.css";
 
 body {
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color:aliceblue;
     padding: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 canvas {
