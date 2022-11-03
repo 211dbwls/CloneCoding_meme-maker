@@ -1,0 +1,12 @@
+input#text {
+    all: unset;   
+    padding: 10px 0px;
+    text-align: center;
+    background-color: white;
+    font-weight: 500;
+    border-radius: 15px;
+}
+
+input#file {
+    display: none;
+}

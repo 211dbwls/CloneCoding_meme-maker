@@ -1,6 +1,7 @@
 @import "reset.css";
 @import "color.css";
 @import "btn.css";
+@import "input.css";
 
 body {
     display: flex;

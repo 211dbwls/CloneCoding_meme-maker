@@ -10,6 +10,10 @@ const modeBtn = document.getElementById("mode-btn");
 const destroyBtn = document.getElementById("destroy-btn");
 const eraserBtn = document.getElementById("eraser-btn");
 
+const fileInput = document.getElementById("file");
+const textInput = document.getElementById("text");
+const saveBtn = document.getElementById("save-btn");
+
 const CANVAS_WIDTH = 800;
 const CANVAS_HEIGHT = 800;
 canvas.width = CANVAS_WIDTH;
@@ -90,6 +94,41 @@ function onEraserClick() {
     modeBtn.innerText = "Fill";
 }
 
+// 이미지.
+function onFileChange(event) {
+    const file = event.target.files[0];
+    const url = URL.createObjectURL(file);
+    const image = new Image();
+
+    image.src = url;
+    image.onload = function() {
+        ctx.drawImage(image, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+        fileInput.value = null;
+    }
+}
+
+// 텍스트 입력.
+function onDoubleClick(event) {
+    ctx.save();
+    if(text !== "") {
+        const text = textInput.value;
+        ctx.lineWidth = 1;
+        ctx.font = "48px serif";
+        ctx.strokeText(text, event.offsetX, event.offsetY);
+        ctx.restore();
+    }
+}
+
+// 이미지 저장. 
+function onSaveClick() {
+    const url = canvas.toDataURL();
+    const a = document.createElement("a");
+
+    a.href = url;
+    a.download = "myDrawing.png";
+    a.click();
+}
+
 // 선 그리기.
 canvas.addEventListener("mousemove", onMove);
 canvas.addEventListener("mousedown", startPaintint);
@@ -106,3 +145,7 @@ modeBtn.addEventListener("click", onModeClick);
 // 리셋 및 지우기.
 destroyBtn.addEventListener("click", onDestroyClick);
 eraserBtn.addEventListener("click", onEraserClick);
+// 이미지.
+fileInput.addEventListener("change", onFileChange);
+canvas.addEventListener("dblclick", onDoubleClick);
+saveBtn.addEventListener("click", onSaveClick);
