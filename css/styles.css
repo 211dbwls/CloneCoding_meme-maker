@@ -1,7 +1,9 @@
 @import "reset.css";
+@import "color.css";
 
 body {
     display: flex;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     background-color: blanchedalmond;
